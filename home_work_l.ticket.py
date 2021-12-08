@@ -1,3 +1,4 @@
+#Счасливый билет
 counter = 0
 
 for ticket_num in range(0, 1000000):
