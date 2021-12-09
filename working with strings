@@ -1,0 +1,9 @@
+text = input('Введите свой текст: ').lower().split()
+replacement = input('Какое слово вы хотите заменить?: ')
+replace_on = input('Какое слово следует заменить на?: ')
+numb = text.count(replacement)
+for x in range(len(text)):
+    if text[x] == replacement:
+        text[x] = replace_on
+print(' '.join(text))
+print(numb)
