@@ -1,0 +1,13 @@
+symbols = []
+print('Вводите ниже по одному символу. Если вы хотите прекратить, нажмите "="')
+while True:
+    symb = input()
+    if symb == '=':
+        break
+    symbols.append(symb)
+if len(symbols) == len(set(symbols)):
+    print('Нет повторяющихся символов')
+for x in range(0, len(symbols)):
+    if symbols[x] in symbols[:x]:
+        print(f'Ваш первый повторяющийся символ"{symbols[x]}"')
+        break
