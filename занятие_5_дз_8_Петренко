@@ -1,0 +1,17 @@
+# хотел совместить регулярное выражение в одну строчку для лаконичности
+# пробовал и через or и через and и просто одну сплошую так вообщем и не понял. 
+
+import re
+
+phone_number = input('введте номер телефона: \n')
+example1 = r'\+?\d{3}(\-?\d){9}'
+example2 = r'\+?\d{2}\(\d{3}\)(\-?\d){7}'
+example3 = r'\+?\(\d{3}\)(\-?\d){9}'
+example4 = r'\d(\-?\d){9}'
+example5 = r'\(\d{3}\)(\-?\d){7}'
+
+example = bool(re.search(example1, phone_number)) or bool(re.search(example2, phone_number)) \
+          or bool(re.search(example3, phone_number)) or bool(re.search(example4, phone_number)) \
+          or bool(re.search(example5, phone_number))
+
+print('Коректный номер' if example == True else 'Неправильный номер')
